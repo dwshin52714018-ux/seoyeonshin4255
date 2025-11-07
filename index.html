@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>충청북도 관광명소 5선 | 50~60대를 위한 여행</title>
+  <meta name="description" content="50~60대를 위한 충청북도 대표 관광명소 5곳. 난이도, 이동 동선, 계절 추천, 주차/화장실 정보까지 한눈에!" />
+  <style>
+    :root {
+      --bg: #fffaf5;
+      --paper: #ffffffcc;
+      --ink: #2f2a26;
+      --subtle: #8a8079;
+      --brand: #5aa1a7;
+      --accent: #f1b24a;
+      --radius: 18px;
+      --shadow: 0 10px 25px rgba(0,0,0,0.08);
+      --max: 1100px;
+      --font-size: 18px; /* base for 50~60대 가독성 */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "Pretendard", ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      font-size: var(--font-size);
+      line-height: 1.75;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fff3e6, #f7fbff 70%) fixed;
+    }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(8px);
+      background: #ffffffb3;
+      border-bottom: 1px solid #0000000f;
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .flex { display: flex; align-items: center; gap: 14px; }
+    .space { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; padding: 14px 0; }
+    .brand-badge { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, var(--brand), var(--accent)); box-shadow: var(--shadow); }
+    nav a { color: var(--ink); text-decoration: none; font-weight: 600; opacity: .85; }
+    nav a:hover { opacity: 1; }
+    .hero {
+      padding: 48px 0 24px;
+    }
+    .hero h1 {
+      margin: 8px 0 10px;
+      font-size: clamp(28px, 5vw, 44px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .hero p { color: var(--subtle); margin: 0; }
+    .controls { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      appearance: none; border: 1px solid #00000014; background: #ffffff;
+      padding: 10px 14px; border-radius: 999px; cursor: pointer; font-weight: 600;
+      box-shadow: var(--shadow);
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .card {
+      grid-column: span 12;
+      background: var(--paper);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      border: 1px solid #0000000f;
+    }
+    @media (min-width: 840px) { .card { grid-column: span 6; } }
+    .card media, .card figure, .card img { display: block; width: 100%; height: auto; }
+    .thumb { aspect-ratio: 16 / 9; object-fit: cover; }
+    .pad { padding: 18px; }
+    h2 { margin: 0 0 6px; font-size: 24px; letter-spacing: -0.01em; }
+    .meta { color: var(--subtle); font-size: 0.95em; margin-bottom: 8px; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 0; }
+    .tag { font-size: .85em; padding: 6px 10px; border-radius: 999px; background: #f6f8fa; border: 1px solid #0000000d; }
+    .info { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 8px; }
+    .info li { list-style: none; }
+    .info strong { display: inline-block; min-width: 5em; }
+    .cta { display: flex; gap: 10px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
+    .cta a { text-decoration: none; }
+    .btn-map { background: var(--brand); color: #fff; border: none; }
+    .btn-ai { background: #fff; border-color: var(--brand); color: var(--brand); }
+    .notice { margin-top: 8px; font-size: 0.92em; color: var(--subtle); }
+
+    .toc { margin: 26px 0 10px; padding: 14px; background: #ffffffcc; border-radius: var(--radius); border: 1px solid #0000000f; }
+    .toc a { text-decoration: none; display: inline-block; padding: 6px 10px; margin: 6px 6px 0 0; background: #f6f8fa; border-radius: 999px; border: 1px solid #0000000d; }
+
+    footer { margin: 40px 0; color: var(--subtle); text-align: center; }
+    .top { position: fixed; right: 16px; bottom: 16px; }
+
+    /* 접근성 향상 */
+    a:focus, button:focus { outline: 3px solid var(--accent); outline-offset: 2px; }
+    .skip { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+    .skip:focus { position: static; width: auto; height: auto; padding: 6px 10px; background: #fff; z-index: 9999; }
+
+    @media print {
+      header, .controls, .top { display:none !important; }
+      body { background: #fff; }
+      .card { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">본문 바로가기</a>
+  <header>
+    <div class="wrap space">
+      <div class="brand">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <div>
+          <strong>충청북도 관광명소 5선</strong><br/>
+          <small>50~60대를 위한 편안한 동선 · 계절 감성</small>
+        </div>
+      </div>
+      <nav class="flex" aria-label="섹션 이동">
+        <a href="#cheongnamdae">청남대</a>
+        <a href="#beopjusa">속리산 법주사</a>
+        <a href="#sanmaki">산막이옛길</a>
+        <a href="#dodam">도담삼봉</a>
+        <a href="#uirimji">의림지</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" class="wrap">
+    <section class="hero">
+      <h1>부드러운 계절 속으로 떠나는 충북 여행</h1>
+      <p>걷기 쉬운 코스, 주차와 화장실 정보, 계절별 추천 포인트까지—편안하고 여유로운 여행을 위한 안내서입니다.</p>
+      <div class="toc" aria-label="명소 바로가기">
+        <a href="#cheongnamdae">① 청남대</a>
+        <a href="#beopjusa">② 속리산 법주사</a>
+        <a href="#sanmaki">③ 괴산 산막이옛길</a>
+        <a href="#dodam">④ 단양 도담삼봉</a>
+        <a href="#uirimji">⑤ 제천 의림지</a>
+      </div>
+      <div class="controls">
+        <button class="btn" id="bigger">글씨 크게</button>
+        <button class="btn" id="softer">눈에 편한 모드</button>
+        <button class="btn" id="reset">기본 보기</button>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="충청북도 대표 관광지 5곳">
+      <!-- 1. 청남대 -->
+      <article id="cheongnamdae" class="card" aria-labelledby="h-cheongnamdae">
+        <figure>
+          <!-- 저작권 이슈 없는 대표 이미지: 키워드 기반 랜덤(대체 가능) -->
+          <img class="thumb" loading="lazy" src="https://picsum.photos/id/1018/1600/900" alt="호숫가와 숲길 풍경(청남대 일대 분위기 참고용 이미지)" />
+        </figure>
+        <div class="pad">
+          <h2 id="h-cheongnamdae">청남대 (청주시)</h2>
+          <div class="meta">대청호반에 자리한 옛 대통령 별장. 넓은 산책로와 정원, 전시관.</div>
+          <ul class="info">
+            <li><strong>난이도</strong> 쉬움 (완만한 산책로, 벤치 다수)</li>
+            <li><strong>추천 계절</strong> 봄 벚꽃 · 가을 단풍</li>
+            <li><strong>주차/화장실</strong> 주차장 넓음 · 주요 지점 화장실 배치</li>
+            <li><strong>관람 팁</strong> 전동 카트(운영 시기 확인) 이용 시 이동 최소화</li>
+          </ul>
+          <div class="cta">
+            <a href="https://map.naver.com/v5/search/%EC%B2%AD%EB%82%A8%EB%8C%80" target="_blank" rel="noopener" class="btn btn-map">네이버지도 열기</a>
+            <a href="#" class="btn btn-ai" aria-disabled="true" title="AI 이미지 교체는 개발 시 연결">AI 이미지로 보기</a>
+          </div>
+          <p class="notice">※ 이미지는 분위기 참고용이며, 무저작권/AI 이미지로 교체 가능합니다.</p>
+        </div>
+      </article>
+
+      <!-- 2. 속리산 법주사 -->
+      <article id="beopjusa" class="card" aria-labelledby="h-beopjusa">
+        <figure>
+          <img class="thumb" loading="lazy" src="https://picsum.photos/id/1021/1600/900" alt="고즈넉한 산사 풍경(속리산 법주사 분위기 참고용 이미지)" />
+        </figure>
+        <div class="pad">
+          <h2 id="h-beopjusa">속리산 법주사 (보은군)</h2>
+          <div class="meta">천년고찰과 세조길, 정비된 데크길로 평탄하게 걸을 수 있어요.</div>
+          <ul class="info">
+            <li><strong>난이도</strong> 쉬움~보통 (사찰 구역은 평탄)</li>
+            <li><strong>추천 계절</strong> 사계절 (봄/가을 풍경 특히 좋음)</li>
+            <li><strong>주차/화장실</strong> 사찰 입구·주차장 인근 다수</li>
+            <li><strong>관람 팁</strong> 세조길은 노약자도 걷기 좋은 완만한 코스</li>
+          </ul>
+          <div class="cta">
+            <a href="https://map.naver.com/v5/search/%EB%B2%95%EC%A3%BC%EC%82%AC" target="_blank" rel="noopener" class="btn btn-map">네이버지도 열기</a>
+            <a href="#" class="btn btn-ai" aria-disabled="true">AI 이미지로 보기</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. 괴산 산막이옛길 -->
+      <article id="sanmaki" class="card" aria-labelledby="h-sanmaki">
+        <figure>
+          <img class="thumb" loading="lazy" src="https://picsum.photos/id/1035/1600/900" alt="호숫가 나무데크 산책로(산막이옛길 분위기 참고용)" />
+        </figure>
+        <div class="pad">
+          <h2 id="h-sanmaki">산막이옛길 (괴산군)</h2>
+          <div class="meta">호수 따라 이어지는 나무데크길로 평지 위주의 걷기 좋은 명소.</div>
+          <ul class="info">
+            <li><strong>난이도</strong> 쉬움 (데크·완만)</li>
+            <li><strong>추천 계절</strong> 봄꽃 · 가을 단풍 · 여름 그늘 산책</li>
+            <li><strong>주차/화장실</strong> 관광안내소·선착장 주변</li>
+            <li><strong>관람 팁</strong> 유람선(운영 시기)로 왕복 동선 단축 가능</li>
+          </ul>
+          <div class="cta">
+            <a href="https://map.naver.com/v5/search/%EC%82%B0%EB%A7%89%EC%9D%B4%EC%98%9B%EA%B8%B8" target="_blank" rel="noopener" class="btn btn-map">네이버지도 열기</a>
+            <a href="#" class="btn btn-ai" aria-disabled="true">AI 이미지로 보기</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. 단양 도담삼봉 -->
+      <article id="dodam" class="card" aria-labelledby="h-dodam">
+        <figure>
+          <img class="thumb" loading="lazy" src="https://picsum.photos/id/1043/1600/900" alt="강 위로 솟은 바위 풍경(도담삼봉 분위기 참고용 이미지)" />
+        </figure>
+        <div class="pad">
+          <h2 id="h-dodam">도담삼봉 (단양군)</h2>
+          <div class="meta">남한강 위 기암봉우리와 포토스팟, 인근 산책로가 잘 정비되어 있어요.</div>
+          <ul class="info">
+            <li><strong>난이도</strong> 쉬움 (전망명소 위주 관람)</li>
+            <li><strong>추천 계절</strong> 봄·가을 맑은 날, 겨울 물안개</li>
+            <li><strong>주차/화장실</strong> 관광지 주차장·화장실 구비</li>
+            <li><strong>관람 팁</strong> 해질녘 노을 타임 추천, 바람 강한 날은 체감온도 주의</li>
+          </ul>
+          <div class="cta">
+            <a href="https://map.naver.com/v5/search/%EB%8F%84%EB%8B%B4%EC%82%BC%EB%B4%89" target="_blank" rel="noopener" class="btn btn-map">네이버지도 열기</a>
+            <a href="#" class="btn btn-ai" aria-disabled="true">AI 이미지로 보기</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. 제천 의림지 -->
+      <article id="uirimji" class="card" aria-labelledby="h-uirimji">
+        <figure>
+          <img class="thumb" loading="lazy" src="https://picsum.photos/id/1056/1600/900" alt="연못과 버드나무 산책로(의림지 분위기 참고용)" />
+        </figure>
+        <div class="pad">
+          <h2 id="h-uirimji">의림지 (제천시)</h2>
+          <div class="meta">삼한시대부터 이어진 저수지 유적. 둘레길이 평탄하고 벤치·쉼터가 많아요.</div>
+          <ul class="info">
+            <li><strong>난이도</strong> 쉬움 (둘레길 평지)</li>
+            <li><strong>추천 계절</strong> 봄 신록 · 여름 녹음 · 가을 단풍 · 겨울 설경</li>
+            <li><strong>주차/화장실</strong> 공영주차장·방문자센터 주변</li>
+            <li><strong>관람 팁</strong> 야간 경관조명 시간 확인 시 분위기 UP</li>
+          </ul>
+          <div class="cta">
+            <a href="https://map.naver.com/v5/search/%EC%9D%98%EB%A6%BC%EC%A7%80" target="_blank" rel="noopener" class="btn btn-map">네이버지도 열기</a>
+            <a href="#" class="btn btn-ai" aria-disabled="true">AI 이미지로 보기</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap" aria-label="여행 전 체크 팁" style="margin-top: 16px;">
+      <div class="card" style="grid-column: span 12;">
+        <div class="pad">
+          <h2>여행 전 체크</h2>
+          <ul>
+            <li>편한 워킹화와 얇은 겉옷을 준비하세요. 일교차가 큽니다.</li>
+            <li>사전 주차 위치 확인 및 현금·모바일 결제 수단 준비.</li>
+            <li>휴식은 60~90분마다 10분! 무리하지 않는 동선 계획.</li>
+            <li>계절 알레르기/혈압약 등 개인 약품을 휴대하세요.</li>
+          </ul>
+          <p class="notice">※ 본 페이지는 정보 안내용입니다. 운영 시간/요금/셔틀 등은 방문 전 공식 안내를 확인하세요.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <button class="btn top" id="toTop" aria-label="맨 위로">▲ 맨 위로</button>
+
+  <footer class="wrap">
+    <p>© 2025 충청북도 여행 가이드(예시). 이미지는 무저작권 또는 분위기 참고용이며, 원하시면 실제 사진/AI 이미지로 교체해드립니다.</p>
+  </footer>
+
+  <script>
+    // 글자 크기 & 눈 편한 모드 토글
+    const bigger = document.getElementById('bigger');
+    const softer = document.getElementById('softer');
+    const reset = document.getElementById('reset');
+    const toTop = document.getElementById('toTop');
+
+    let enlarged = false;
+    let soft = false;
+
+    bigger.addEventListener('click', () => {
+      enlarged = !enlarged;
+      document.documentElement.style.setProperty('--font-size', enlarged ? '20px' : '18px');
+      bigger.textContent = enlarged ? '글씨 보통' : '글씨 크게';
+    });
+
+    softer.addEventListener('click', () => {
+      soft = !soft;
+      document.documentElement.style.setProperty('--bg', soft ? '#f9fff8' : '#fffaf5');
+      document.body.style.background = soft 
+        ? 'linear-gradient(180deg, #f1fff1, #f7fbff 70%) fixed' 
+        : 'linear-gradient(180deg, #fff3e6, #f7fbff 70%) fixed';
+      document.documentElement.style.setProperty('--ink', soft ? '#2a2f26' : '#2f2a26');
+      softer.textContent = soft ? '기본 색감' : '눈에 편한 모드';
+    });
+
+    reset.addEventListener('click', () => {
+      enlarged = false; soft = false;
+      document.documentElement.style.setProperty('--font-size', '18px');
+      document.body.style.background = 'linear-gradient(180deg, #fff3e6, #f7fbff 70%) fixed';
+      softer.textContent = '눈에 편한 모드';
+      bigger.textContent = '글씨 크게';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
